@@ -1,4 +1,4 @@
-const API_URL = "https://url-shortener-1-l4nl.onrender.com";
+const API_URL = "https://url-shortener-2-493h.onrender.com";
 
 const urlInput = document.getElementById("urlInput");
 const shortenBtn = document.getElementById("shortenBtn");
