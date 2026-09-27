@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShort - URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">L</div>
+            <span>LinkShort</span>
+        </div>
+
+        <div class="nav-text">
+            Simple URL Shortener
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="tag">FAST & SIMPLE</p>
+
+            <h1>Shorten your URLs</h1>
+
+            <p class="subtitle">
+                Create short, easy-to-share links and track their clicks.
+            </p>
+        </section>
+
+        <section class="card">
+
+            <h2>Create Short URL</h2>
+
+            <p class="card-description">
+                Enter your long URL below to generate a short link.
+            </p>
+
+            <div class="input-group">
+                <label for="urlInput">Long URL</label>
+
+                <div class="input-row">
+                    <input
+                        type="url"
+                        id="urlInput"
+                        placeholder="https://example.com/your-long-url"
+                    >
+
+                    <button id="shortenBtn">
+                        Shorten URL
+                    </button>
+                </div>
+            </div>
+
+            <p id="shortenError" class="error"></p>
+
+            <div id="resultBox" class="result-box hidden">
+
+                <div class="result-header">
+                    <span>Your Short URL</span>
+                    <span class="success-badge">Created</span>
+                </div>
+
+                <div class="short-url-row">
+                    <input
+                        type="text"
+                        id="shortUrl"
+                        readonly
+                    >
+
+                    <button id="copyBtn" class="secondary-btn">
+                        Copy
+                    </button>
+
+                    <button id="openBtn" class="primary-small-btn">
+                        Open
+                    </button>
+                </div>
+
+                <p id="copyMessage" class="copy-message"></p>
+
+            </div>
+
+        </section>
+
+        <section class="card analytics-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>URL Analytics</h2>
+
+                    <p class="card-description">
+                        Check how many times your short URL has been visited.
+                    </p>
+                </div>
+
+                <div class="analytics-icon">
+                    A
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="shortIdInput">Short ID</label>
+
+                <div class="input-row">
+
+                    <input
+                        type="text"
+                        id="shortIdInput"
+                        placeholder="Enter short ID"
+                    >
+
+                    <button id="analyticsBtn">
+                        View Analytics
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p id="analyticsError" class="error"></p>
+
+            <div id="analyticsResult" class="hidden">
+
+                <div class="stats">
+
+                    <div class="stat-box">
+
+                        <span class="stat-label">
+                            Total Clicks
+                        </span>
+
+                        <span id="totalClicks" class="stat-number">
+                            0
+                        </span>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <span class="stat-label">
+                            Short ID
+                        </span>
+
+                        <span id="displayShortId" class="stat-id">
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="history-section">
+
+                    <h3>Visit History</h3>
+
+                    <div id="visitHistory" class="history-list">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>LinkShort &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
